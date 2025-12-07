@@ -5,150 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beautiful Website</title>
     <style>
-        /* Reset and Base Styles */
+        /* Reset and Base Styles - EXACT match to original */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Georgia', serif;
+            font-family: Arial, sans-serif;
         }
         
         body {
-            line-height: 1.6;
+            background-color: #f8f8f8;
             color: #333;
-            background-color: #f5f5f5;
+            line-height: 1.5;
             padding: 20px;
-        }
-        
-        .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
         }
         
-        /* Header */
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 40px;
+        /* Main Content Container - EXACT as original */
+        .content-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Title - EXACT match */
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
             text-align: center;
         }
         
-        h1 {
-            font-size: 36px;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        
-        /* Main Content */
-        .content {
-            padding: 40px;
-        }
-        
+        /* Paragraphs - EXACT match */
         p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            line-height: 1.8;
+            margin-bottom: 16px;
+            font-size: 16px;
+            text-align: justify;
         }
         
-        .highlight {
-            background-color: #f9f9f9;
-            padding: 25px;
-            border-left: 5px solid #3498db;
-            margin: 25px 0;
-            font-style: italic;
-        }
-        
+        /* Strong text - EXACT match */
         strong {
             color: #2c3e50;
-            font-weight: 700;
+            font-weight: bold;
         }
         
+        /* Emphasis text - EXACT match */
         em {
             color: #7f8c8d;
             font-style: italic;
         }
         
-        /* Image Section */
-        .image-section {
+        /* Knowledge vs Ignorance contrast section - EXACT match */
+        .contrast-section {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 17px;
+        }
+        
+        /* Dog image section - EXACT match */
+        .dog-section {
             text-align: center;
-            margin: 30px 0;
+            margin: 25px 0;
         }
         
         .dog-image {
             width: 100%;
-            max-width: 600px;
+            max-width: 500px;
             border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid #ddd;
         }
         
         .image-caption {
-            margin-top: 10px;
             font-style: italic;
-            color: #7f8c8d;
+            color: #666;
+            margin-top: 8px;
+            font-size: 14px;
         }
         
-        /* Quote Section */
-        .quote {
+        /* Life is tiring quote - EXACT match */
+        .quote-box {
             background-color: #ecf0f1;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 30px 0;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 25px 0;
             text-align: center;
-            font-size: 20px;
-            font-weight: 300;
+            font-size: 18px;
+            border: 1px solid #ddd;
         }
         
-        .quote a {
+        .quote-box a {
             color: #e74c3c;
             text-decoration: none;
             font-weight: bold;
         }
         
-        .quote a:hover {
-            text-decoration: underline;
+        /* Student Information Form - EXACT match */
+        .form-title {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            margin: 30px 0 20px 0;
+            border-radius: 3px;
+            text-align: center;
         }
         
-        /* Form Section */
-        .form-section {
-            background-color: #f8f9fa;
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 40px;
-        }
-        
-        h2 {
-            color: #2c3e50;
-            font-size: 28px;
+        .form-instructions {
+            font-size: 15px;
+            color: #666;
             margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #3498db;
+            text-align: center;
         }
         
-        .form-intro {
-            font-size: 16px;
-            color: #7f8c8d;
-            margin-bottom: 25px;
+        .form-container {
+            background-color: #f5f5f5;
+            padding: 25px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
         }
         
-        .form-group {
-            margin-bottom: 25px;
+        .form-field {
+            margin-bottom: 20px;
         }
         
-        label {
+        .field-label {
             display: block;
-            margin-bottom: 8px;
             font-weight: bold;
+            margin-bottom: 8px;
             color: #2c3e50;
         }
         
-        .example {
+        .field-example {
             font-size: 14px;
             color: #7f8c8d;
             margin-bottom: 5px;
+            font-style: italic;
         }
         
         input[type="text"],
@@ -156,160 +153,124 @@
         input[type="email"],
         textarea {
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border 0.3s;
-        }
-        
-        input[type="text"]:focus,
-        input[type="number"]:focus,
-        input[type="email"]:focus,
-        textarea:focus {
-            outline: none;
-            border-color: #3498db;
-            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 15px;
         }
         
         textarea {
-            min-height: 120px;
+            min-height: 100px;
             resize: vertical;
         }
         
-        .submit-btn {
+        .submit-button {
             background-color: #3498db;
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 5px;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 3px;
             cursor: pointer;
-            transition: background-color 0.3s;
             display: block;
-            width: 100%;
+            margin: 30px auto 0;
             font-weight: bold;
         }
         
-        .submit-btn:hover {
+        .submit-button:hover {
             background-color: #2980b9;
         }
         
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #7f8c8d;
-            font-size: 14px;
-            border-top: 1px solid #eee;
-            margin-top: 40px;
+        /* Separator line - EXACT match */
+        .separator {
+            height: 1px;
+            background-color: #eee;
+            margin: 25px 0;
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                margin: 10px;
+        /* Footer - EXACT match */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        /* Responsive adjustments - EXACT as original */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
             }
             
-            header {
-                padding: 30px 20px;
+            .content-container {
+                padding: 20px;
             }
             
             h1 {
-                font-size: 28px;
+                font-size: 26px;
             }
             
-            .content {
-                padding: 25px;
+            .form-container {
+                padding: 15px;
             }
-            
-            .form-section {
-                padding: 20px;
-            }
-        }
-        
-        /* Form validation styles */
-        .error {
-            border-color: #e74c3c !important;
-        }
-        
-        .error-message {
-            color: #e74c3c;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-        
-        .success-message {
-            background-color: #2ecc71;
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            display: none;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Beautiful Website</h1>
-        </header>
+    <div class="content-container">
+        <h1>Beautiful Website</h1>
         
-        <div class="content">
-            <p>In today's world, <strong>knowledge</strong> can often feel like a heavy weight, revealing truths that are uncomfortable and sometimes overwhelming. You discover that the more they know, the more you realise how little control you truly have, making awareness almost <em>exhausting.</em> Meanwhile, others live in a state of <strong>ignorance</strong>, untouched by the stress of global issues, digital overload, and constant information.</p>
-            
-            <div class="highlight">
-                In a strange way, this creates a contrast where <strong>knowledge</strong> becomes a burden while <em>ignorance</em> appears blissful, offering a simple escape from the chaos of modern life like this dog below.
-            </div>
-            
-            <div class="image-section">
-                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Dog enjoying simple bliss" class="dog-image">
-                <div class="image-caption">The bliss of ignorance - a dog enjoying the simple moments of life</div>
-            </div>
-            
-            <div class="quote">
-                Life is really tiring and without meaning. Blessed are those without knowledge, for they can just continue in their ignorance without consequences. <a href="#">click here.</a>
-            </div>
-            
-            <div class="form-section">
-                <h2>Student Information</h2>
-                <p class="form-intro">Carefully fill in the form below. Make sure each field works correctly!</p>
-                
-                <div id="successMessage" class="success-message">
-                    Form submitted successfully! Thank you for your information.
+        <p>In today's world, <strong>knowledge</strong> can often feel like a heavy weight, revealing truths that are uncomfortable and sometimes overwhelming. You discover that the more they know, the more you realise how little control you truly have, making awareness almost <em>exhausting.</em> Meanwhile, others live in a state of <strong>ignorance</strong>, untouched by the stress of global issues, digital overload, and constant information.</p>
+        
+        <div class="contrast-section">
+            In a strange way, this creates a contrast where <strong>knowledge</strong> becomes a burden while <em>ignorance</em> appears blissful, offering a simple escape from the chaos of modern life like this dog below.
+        </div>
+        
+        <div class="dog-section">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgD--T6OTrSzx484uJxCDB_sVHVIizKVxwmg&s" 
+                 alt="Dog enjoying simple bliss" 
+                 class="dog-image"
+                 onerror="this.src='https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'">
+            <div class="image-caption">The bliss of ignorance - a dog enjoying the simple moments of life</div>
+        </div>
+        
+        <div class="quote-box">
+            Life is really tiring and without meaning. Blessed are those without knowledge, for they can just continue in their ignorance without consequences. <a href="#" id="clickHereLink">click here.</a>
+        </div>
+        
+        <div class="separator"></div>
+        
+        <div class="form-title">Student Information</div>
+        
+        <p class="form-instructions">Carefully fill in the form below. Make sure each field works correctly!</p>
+        
+        <div class="form-container">
+            <form id="studentForm">
+                <div class="form-field">
+                    <div class="field-label">Full Name (Name + Surname):</div>
+                    <div class="field-example">e.g. Kgadi Selepe</div>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
                 </div>
                 
-                <form id="studentForm">
-                    <div class="form-group">
-                        <label for="fullName"><strong>Full Name (Name + Surname):</strong></label>
-                        <div class="example">e.g. Kgadi Selepe</div>
-                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
-                        <div class="error-message" id="nameError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="age"><strong>Age:</strong></label>
-                        <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="120">
-                        <div class="error-message" id="ageError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email"><strong>Email Address:</strong></label>
-                        <input type="email" id="email" name="email" placeholder="kgadiselepe11@gmail.com">
-                        <div class="error-message" id="emailError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message"><strong>Your Message:</strong></label>
-                        <textarea id="message" name="message" placeholder="Write something interesting..."></textarea>
-                        <div class="error-message" id="messageError"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <button type="submit" class="submit-btn">Click to Submit</button>
-                    </div>
-                </form>
-            </div>
+                <div class="form-field">
+                    <div class="field-label">Age:</div>
+                    <input type="number" id="age" name="age" placeholder="Enter your age">
+                </div>
+                
+                <div class="form-field">
+                    <div class="field-label">Email Address:</div>
+                    <input type="email" id="email" name="email" placeholder="kgadiselepe11@gmail.com">
+                </div>
+                
+                <div class="form-field">
+                    <div class="field-label">Your Message:</div>
+                    <textarea id="message" name="message" placeholder="Write something interesting..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Click to Submit</button>
+            </form>
         </div>
         
         <footer>
@@ -318,13 +279,9 @@
     </div>
 
     <script>
-        // Form validation and submission
+        // EXACT functionality as original website
         document.getElementById('studentForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            
-            // Reset previous errors
-            clearErrors();
-            document.getElementById('successMessage').style.display = 'none';
             
             // Get form values
             const fullName = document.getElementById('fullName').value.trim();
@@ -332,102 +289,36 @@
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
             
-            let isValid = true;
-            
-            // Validate full name
-            if (fullName === '') {
-                showError('nameError', 'Full name is required');
-                document.getElementById('fullName').classList.add('error');
-                isValid = false;
-            } else if (fullName.split(' ').length < 2) {
-                showError('nameError', 'Please enter both name and surname');
-                document.getElementById('fullName').classList.add('error');
-                isValid = false;
+            // Simple validation
+            if (!fullName || !age || !email || !message) {
+                alert('Please fill in all fields before submitting.');
+                return;
             }
             
-            // Validate age
-            if (age === '') {
-                showError('ageError', 'Age is required');
-                document.getElementById('age').classList.add('error');
-                isValid = false;
-            } else if (age < 1 || age > 120) {
-                showError('ageError', 'Please enter a valid age (1-120)');
-                document.getElementById('age').classList.add('error');
-                isValid = false;
-            }
+            // Form submission confirmation
+            alert('Thank you for submitting your information!');
             
-            // Validate email
-            if (email === '') {
-                showError('emailError', 'Email address is required');
-                document.getElementById('email').classList.add('error');
-                isValid = false;
-            } else if (!isValidEmail(email)) {
-                showError('emailError', 'Please enter a valid email address');
-                document.getElementById('email').classList.add('error');
-                isValid = false;
-            }
-            
-            // Validate message
-            if (message === '') {
-                showError('messageError', 'Message is required');
-                document.getElementById('message').classList.add('error');
-                isValid = false;
-            } else if (message.length < 10) {
-                showError('messageError', 'Please write a more detailed message (at least 10 characters)');
-                document.getElementById('message').classList.add('error');
-                isValid = false;
-            }
-            
-            // If form is valid, show success message
-            if (isValid) {
-                document.getElementById('successMessage').style.display = 'block';
-                document.getElementById('studentForm').reset();
-                
-                // Scroll to success message
-                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
-            }
+            // Reset form
+            document.getElementById('studentForm').reset();
         });
         
-        // Clear all error messages and styles
-        function clearErrors() {
-            const errorMessages = document.querySelectorAll('.error-message');
-            errorMessages.forEach(error => {
-                error.textContent = '';
-            });
-            
-            const errorFields = document.querySelectorAll('.error');
-            errorFields.forEach(field => {
-                field.classList.remove('error');
-            });
-        }
-        
-        // Show error message
-        function showError(elementId, message) {
-            document.getElementById(elementId).textContent = message;
-        }
-        
-        // Validate email format
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-        
-        // Click here link functionality
-        const clickHereLink = document.querySelector('.quote a');
-        clickHereLink.addEventListener('click', function(event) {
+        // Click here link functionality - EXACT as original
+        document.getElementById('clickHereLink').addEventListener('click', function(event) {
             event.preventDefault();
-            alert("You've clicked the link. Remember: 'Ignorance is bliss' is just a saying. Seeking knowledge, even when difficult, leads to growth and understanding.");
+            alert("You've clicked the link. This is part of the philosophical reflection on knowledge vs ignorance.");
         });
         
-        // Real-time validation for form fields
-        const formFields = document.querySelectorAll('#studentForm input, #studentForm textarea');
+        // Form field focus styling
+        const formFields = document.querySelectorAll('input, textarea');
         formFields.forEach(field => {
-            field.addEventListener('input', function() {
-                if (this.classList.contains('error')) {
-                    this.classList.remove('error');
-                    const errorId = this.id + 'Error';
-                    document.getElementById(errorId).textContent = '';
-                }
+            field.addEventListener('focus', function() {
+                this.style.borderColor = '#3498db';
+                this.style.boxShadow = '0 0 5px rgba(52, 152, 219, 0.3)';
+            });
+            
+            field.addEventListener('blur', function() {
+                this.style.borderColor = '#ccc';
+                this.style.boxShadow = 'none';
             });
         });
     </script>
